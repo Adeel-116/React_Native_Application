@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
 import { View, Text, StyleSheet, StatusBar, ImageBackground, TouchableOpacity, Alert } from "react-native"
-import { Input } from "../../Input";
-import { CameraAccess } from "../../CameraAccess";
-import { Button } from "../../Button";
+import { Input } from "../../Components/Input";
+import { CameraAccess } from "../../Components/CameraAccess";
+import { Button } from "../../Components/Button";
 import Icon from "react-native-vector-icons/AntDesign";
 import { useNavigation } from "@react-navigation/native";
 
@@ -64,7 +64,7 @@ function SignUp() {
                     barStyle="light-content"
                 />
                 <ImageBackground
-                    source={require('../../../assets/Images/gym_signup.jpg')}
+                    source={require('../../assets/Images/gym_signup.jpg')}
                     style={styles.bgImage}
                 >
                     <View style={styles.backIcon}>

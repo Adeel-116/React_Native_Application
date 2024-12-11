@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { View, StatusBar, Text, Pressable, Dimensions, StyleSheet, ImageBackground, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
-import { Input } from "../../Input";
-import { Button } from "../../Button";
+import { View, StatusBar, Text, Pressable, StyleSheet, ImageBackground, Image, KeyboardAvoidingView, Platform, TouchableOpacity } from "react-native";
+import { Input } from "../../Components/Input";
+import { Button } from "../../Components/Button";
 import { useNavigation } from "@react-navigation/native";
-import { TouchableHighlight } from "react-native";
 
 
 
@@ -55,7 +54,7 @@ function SignIn(): JSX.Element {
                 />
 
                 <ImageBackground
-                    source={require('../../../assets/Images/gym.jpg')}
+                    source={require('../../assets/Images/gym.jpg')}
                     style={styles.bgImage}
                 >
                     <View style={styles.bgContainer}>
@@ -94,19 +93,19 @@ function SignIn(): JSX.Element {
                                 <View style={{ flexDirection: 'row', gap: 15 }}>
                                     <Pressable style={styles.linkButton} onPress={() => console.log("Iphone")}>
                                         <Image
-                                            source={require('../../../assets/Images/iphone.png')}
+                                            source={require('../../assets/Images/iphone.png')}
                                             style={{}}
                                         />
                                     </Pressable>
                                     <Pressable style={styles.linkButton} onPress={() => console.log("Google")}>
                                         <Image
-                                            source={require('../../../assets/Images/Google.png')}
+                                            source={require('../../assets/Images/Google.png')}
                                             style={{}}
                                         />
                                     </Pressable>
                                     <Pressable style={styles.linkButton} onPress={() => console.log("facebookIcon")}>
                                         <Image
-                                            source={require('../../../assets/Images/facebookIcon.png')}
+                                            source={require('../../assets/Images/facebookIcon.png')}
                                             style={{}}
                                         />
                                     </Pressable>
