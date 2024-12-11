@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { View, StatusBar, Text, Pressable, Dimensions, StyleSheet, ImageBackground, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView } from "react-native";
+import { View, StatusBar, Text, Pressable, Dimensions, StyleSheet, ImageBackground, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
 import { Input } from "../../Input";
 import { Button } from "../../Button";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableHighlight } from "react-native";
 
-function SignIn({navigation}): JSX.Element {
+
+
+function SignIn(): JSX.Element {
+    const navigation = useNavigation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -111,9 +116,9 @@ function SignIn({navigation}): JSX.Element {
                                 <Text style={{ color: '#fafafa' }}>
                                     Don't have an account?
                                 </Text>
-                                <Pressable onPress={()=> navigation.navigate('SignUp')}>
+                                <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}>
                                     <Text style={{ textDecorationLine: 'underline', color: '#fafafa' }}>Sign Up</Text>
-                                </Pressable>
+                                </TouchableOpacity>
                             </View>
 
 
