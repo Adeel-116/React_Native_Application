@@ -47,13 +47,34 @@ function SignUp() {
     };
 
 
-    const handleSignIn = () => {
+    const handleSignIn = async () => {
         if (name && email && password && confirmPassword) {
+            
+            const data={
+                username: name,
+                email: email,
+                password: password
+            }
             console.log(name, email, password, confirmPassword);
-        } else {
-            console.log("Kindly fill all the fields");
+            try{
+                console.log("try block")
+            const response = await fetch("http://192.168.100.2:5000/Signup", {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json()
+            
+            console.log(result.message)
+        } 
+        catch(error){
+            console.log("Error in API")
         }
     }
+}
 
     return (
         <>
